@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dr Pedro Lafargue | Operations, procurement and investment leadership</title>
+<meta name="description" content="Operations and supply-chain leader turning operations into investment decisions across food manufacturing, global sourcing and group decarbonisation.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F6F7F3; --surface:#ECEFE8; --ink:#16231C; --muted:#56655C; --line:#D3DACE;
+  --accent:#1F4A37; --accent-2:#B8860B;
+  --sans:"Bricolage Grotesque","Segoe UI",system-ui,-apple-system,sans-serif;
+  --serif:"Source Serif 4",Georgia,"Times New Roman",serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--paper:#111814;--surface:#18221D;--ink:#E7ECE5;--muted:#A2B1A7;--line:#2A3830;--accent:#8CC9A1;--accent-2:#E2B33F}
+}
+:root[data-theme="dark"]{--paper:#111814;--surface:#18221D;--ink:#E7ECE5;--muted:#A2B1A7;--line:#2A3830;--accent:#8CC9A1;--accent-2:#E2B33F}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);font-size:1.125rem;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-underline-offset:.18em;text-decoration-thickness:1px}
+:focus-visible{outline:3px solid var(--accent-2);outline-offset:3px;border-radius:2px}
+.wrap{max-width:68rem;margin:0 auto;padding:0 1.5rem}
+h1,h2,h3{font-family:var(--sans);margin:0;line-height:1.1;letter-spacing:-.015em;font-weight:600}
+p{margin:0 0 1em}
+
+header{display:flex;justify-content:space-between;align-items:center;padding:1.4rem 0;font-family:var(--sans);font-size:.95rem}
+header .name{font-weight:600;color:var(--ink);text-decoration:none}
+header nav{display:flex;gap:1.5rem}
+header nav a{color:var(--muted);text-decoration:none}
+header nav a:hover{color:var(--ink)}
+
+.hero{padding:4.5rem 0 3.5rem;border-bottom:1px solid var(--line)}
+.eyebrow{font-family:var(--sans);font-size:.85rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin:0 0 1.1rem}
+.hero h1{font-size:clamp(2.5rem,6vw,4.6rem);font-weight:800;letter-spacing:-.035em;line-height:1;max-width:14ch}
+.hero .lede{font-size:1.3rem;max-width:40rem;margin:2rem 0 1.25rem}
+.hero .meta{font-family:var(--sans);font-size:.98rem;color:var(--muted);margin:0 0 2rem}
+.btn{display:inline-flex;align-items:center;min-height:44px;padding:.75rem 1.4rem;border-radius:999px;background:var(--accent);color:var(--paper);font-family:var(--sans);font-weight:600;text-decoration:none}
+
+.glance{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-bottom:1px solid var(--line)}
+.glance div{padding:2rem 1.25rem 2rem 0;font-family:var(--sans);font-size:.92rem;color:var(--muted);line-height:1.4}
+.glance div + div{padding-left:1.25rem;border-left:1px solid var(--line)}
+.glance b{display:block;font-size:clamp(2rem,4vw,2.9rem);font-weight:800;color:var(--ink);letter-spacing:-.03em;line-height:1;margin-bottom:.5rem}
+
+.row{display:grid;grid-template-columns:13rem 1fr;gap:2.5rem;padding:4rem 0;border-bottom:1px solid var(--line)}
+.row > h2{font-size:.85rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);padding-top:.35rem}
+
+.bring{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
+.bring h3{font-size:1.2rem;margin-bottom:.6rem}
+.bring p{font-size:1.02rem;margin:0}
+
+.outcome{display:grid;grid-template-columns:9.5rem 1fr;gap:1.75rem;padding:1.75rem 0;border-top:1px solid var(--line)}
+.outcome:first-child{border-top:0;padding-top:0}
+.outcome .num{font-family:var(--sans);font-weight:800;font-size:2.4rem;line-height:1;color:var(--accent);letter-spacing:-.03em}
+.outcome .num small{display:block;font-weight:400;font-size:.8rem;color:var(--muted);letter-spacing:0;margin-top:.45rem;line-height:1.35}
+.outcome .org{font-family:var(--sans);font-size:.88rem;color:var(--muted);margin:0 0 .3rem}
+.outcome h3{font-size:1.3rem;margin-bottom:.55rem}
+.outcome p{font-size:1.04rem;margin:0}
+
+.lead-p{font-size:1.2rem;max-width:42rem}
+.skills{display:flex;flex-wrap:wrap;gap:.5rem;list-style:none;margin:1.25rem 0 0;padding:0;font-family:var(--sans);font-size:.92rem}
+.skills li{border:1px solid var(--line);border-radius:999px;padding:.3rem .85rem;color:var(--muted)}
+
+.career{list-style:none;margin:0;padding:0}
+.career li{display:grid;grid-template-columns:7.5rem 1fr;gap:1.5rem;padding:1.1rem 0;border-top:1px solid var(--line)}
+.career li:first-child{border-top:0;padding-top:0}
+.career .yr{font-family:var(--sans);font-size:.92rem;color:var(--muted);padding-top:.15rem}
+.career strong{display:block;font-family:var(--sans);font-weight:600;font-size:1.08rem}
+.career span{font-size:1rem;color:var(--muted)}
+
+.two{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem}
+.two h3{font-size:1rem;margin-bottom:.75rem;color:var(--muted);font-weight:400}
+.two ul{margin:0;padding:0;list-style:none}
+.two li{padding:.45rem 0;border-top:1px solid var(--line);font-size:1rem}
+.two li:first-child{border-top:0}
+
+.contact{padding:4.5rem 0 3rem}
+.contact h2{font-size:clamp(1.8rem,3.5vw,2.6rem);margin-bottom:1rem}
+.contact p{font-size:1.15rem;max-width:36rem;margin-bottom:1.75rem}
+footer{padding:1.5rem 0 2.5rem;font-family:var(--sans);font-size:.88rem;color:var(--muted)}
+
+@media (max-width:860px){
+  .row{grid-template-columns:1fr;gap:1.25rem;padding:3rem 0}
+  .bring{grid-template-columns:1fr;gap:1.5rem}
+  .glance{grid-template-columns:1fr 1fr}
+  .glance div:nth-child(3){padding-left:0;border-left:0}
+  .glance div:nth-child(n+3){border-top:1px solid var(--line)}
+  .two{grid-template-columns:1fr;gap:2rem}
+}
+@media (max-width:560px){
+  body{font-size:1.0625rem}
+  .wrap{padding:0 1.15rem}
+  header nav{display:none}
+  .hero{padding:2.5rem 0 2.5rem}
+  .hero .lede{font-size:1.15rem}
+  .outcome{grid-template-columns:1fr;gap:.75rem}
+  .career li{grid-template-columns:1fr;gap:.2rem}
+  .btn{width:100%;justify-content:center}
+}
+@media print{
+  :root{--paper:#fff;--surface:#fff;--ink:#000;--muted:#444;--line:#ccc;--accent:#1F4A37}
+  header nav,.btn{display:none}
+  body{font-size:11pt}
+  .hero{padding:1rem 0 1.5rem}
+  .row{padding:1.5rem 0;break-inside:avoid}
+  .outcome{break-inside:avoid}
+  .contact{padding:1rem 0}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="name" href="#top">Dr Pedro Lafargue</a>
+    <nav aria-label="Main">
+      <a href="#outcomes">Outcomes</a>
+      <a href="#career">Career</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+</div>
+
+<main id="top">
+  <section class="wrap hero" aria-labelledby="heroH">
+    <p class="eyebrow">Operations · Procurement · Investment</p>
+    <h1 id="heroH">I turn operations into investment decisions.</h1>
+    <p class="lede">Operations and supply-chain leader with 12+ years across food manufacturing, global sourcing and group decarbonisation. I've launched a factory, led production teams of 100+, secured £15m+ of client-backed programmes across 30 countries, and now build the investment case for decarbonisation across Virgin's portfolio.</p>
+    <p class="meta">Group Sustainability – Carbon Manager, Virgin Management. London. PhD, supply-chain traceability.</p>
+    <a class="btn" href="https://www.linkedin.com/in/pedro-lafargue-m/">Connect on LinkedIn</a>
+  </section>
+
+  <div class="wrap">
+    <div class="glance" aria-label="At a glance">
+      <div><b>100+</b>people led in production</div>
+      <div><b>£15m+</b>programmes approved by multinational customers</div>
+      <div><b>30</b>countries in the supply base I managed</div>
+      <div><b>10–30%</b>cuts in product carbon footprints</div>
+    </div>
+
+    <section class="row" aria-labelledby="bringH">
+      <h2 id="bringH">What I bring</h2>
+      <div class="bring">
+        <div>
+          <h3>Operational leadership</h3>
+          <p>I've launched a factory on time and on budget, recovered a failing line and lifted output 60%. I know how plants, suppliers and field teams actually run, and what it takes to change them.</p>
+        </div>
+        <div>
+          <h3>Investment discipline</h3>
+          <p>CapEx, OpEx, IRR and risk on every case. Costed roadmaps for ExCo and Board, long-term partnerships and purchase agreements, and an honest comparison with the cheaper alternative.</p>
+        </div>
+        <div>
+          <h3>Supply-chain and climate risk</h3>
+          <p>Commodity and energy volatility, deforestation regulation and value-chain emissions, turned into procurement and portfolio decisions rather than reports.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="row" id="outcomes" aria-labelledby="outH">
+      <h2 id="outH">Selected outcomes</h2>
+      <div>
+        <article class="outcome">
+          <div class="num">50%<small>target turned into a costed Board choice</small></div>
+          <div>
+            <p class="org">Virgin Management, 2025–now</p>
+            <h3>A decarbonisation roadmap the Board can fund</h3>
+            <p>Converted the group's Scope 1 and 2 target into a costed roadmap across energy certificates, on-site solar, retrofits, energy procurement and carbon credits, showing a fundable pathway and the investment gap. I also built the asset-level solar investment model and led the procurement of the group's carbon-accounting platform.</p>
+          </div>
+        </article>
+        <article class="outcome">
+          <div class="num">£15m+<small>approved across 30+ programmes</small></div>
+          <div>
+            <p class="org">ofi (Olam Food Ingredients), 2021–2025</p>
+            <h3>A climate and nature investment portfolio</h3>
+            <p>Structured long-term partnerships and purchase agreements with multinational customers, sharing CapEx, OpEx and risk, with payment for ecosystem services and supply-risk reduction built in. The programmes reached about 100,000 farmers and 200,000 hectares, backed by satellite monitoring of 950,000+ farms.</p>
+          </div>
+        </article>
+        <article class="outcome">
+          <div class="num">+60%<small>powdered-line output</small></div>
+          <div>
+            <p class="org">Quala, 2015–2016</p>
+            <h3>A factory launched on time and on budget</h3>
+            <p>Selected a month after joining to lead production for a new factory. I recruited the team, made the equipment calls and hit the CEO's tonnage target, with downtime held below 10%.</p>
+          </div>
+        </article>
+        <article class="outcome">
+          <div class="num">+20%<small>product margin</small></div>
+          <div>
+            <p class="org">PRONACA, 2016–2017</p>
+            <h3>Three products from lab to factory</h3>
+            <p>Took pepperoni, Polish sausage and bacon from formulation to one-tonne industrial runs, and reformulated for value segments to lift margin by about 20%.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="row" aria-labelledby="leadH">
+      <h2 id="leadH">How I lead</h2>
+      <div>
+        <p class="lead-p">I listen first, adapt to the room and translate complex analysis into the decision each audience needs to make. That has carried me from plant managers at 3 am to ExCo, and across matrix teams of country heads, legal, technology and field partners on four continents.</p>
+        <ul class="skills" aria-label="Strengths">
+          <li>Negotiation</li><li>Facilitation</li><li>Coaching</li><li>Board communication</li><li>Cross-cultural teams</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="row" id="career" aria-labelledby="careerH">
+      <h2 id="careerH">Career</h2>
+      <ol class="career" reversed>
+        <li><p class="yr">2025–now</p><div><strong>Virgin Management</strong><span>Group Sustainability – Carbon Manager</span></div></li>
+        <li><p class="yr">2021–2025</p><div><strong>ofi (Olam Food Ingredients)</strong><span>Global Climate Action and Data Manager, promoted from Carbon Footprint Manager</span></div></li>
+        <li><p class="yr">2017–2021</p><div><strong>University of the West of England and DETI</strong><span>PhD, research associate and research fellow in digital manufacturing</span></div></li>
+        <li><p class="yr">2012–2017</p><div><strong>Quala, PRONACA and Tree of Wisdom Chocolate</strong><span>Production leadership, new product development, and founder of a farm-to-bar chocolate brand</span></div></li>
+      </ol>
+    </section>
+
+    <section class="row" aria-labelledby="credH">
+      <h2 id="credH">Credentials</h2>
+      <div class="two">
+        <div>
+          <h3>Education</h3>
+          <ul>
+            <li>PhD, Supply Chain Traceability and Applied Genetics, University of the West of England</li>
+            <li>BSc Engineering, Agro-industrial Engineering and Food Science, Universidad de las Américas</li>
+            <li>BSc Honours, Agro-Industry, Southeast Missouri State University</li>
+            <li>Quantitative Finance; Data Engineering; GHG Protocol; Six Sigma Yellow Belt</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Recognition</h3>
+          <ul>
+            <li>Finalist, Net-Zero Innovation of the Year, edie Awards 2024</li>
+            <li>Contributor, GHG Protocol Land Sector and Removals technical group</li>
+            <li>Peer-reviewed paper, <a href="https://doi.org/10.1108/SCM-11-2020-0583">Supply Chain Management</a>, 2022</li>
+            <li>Panel speaker, <a href="https://event.edie.net/edie25/speaker/1551956/pedro-lafargue">edie 25</a></li>
+            <li>Fluent English and Spanish</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact" aria-labelledby="contactH">
+      <h2 id="contactH">Let's talk</h2>
+      <p>I'm open to conversations about operations, procurement and investment leadership, particularly where supply chains, capital and climate risk meet.</p>
+      <a class="btn" href="https://www.linkedin.com/in/pedro-lafargue-m/">Message me on LinkedIn</a>
+    </section>
+  </div>
+</main>
+
+<footer class="wrap">© 2026 Dr Pedro Lafargue</footer>
+</body>
+</html>
